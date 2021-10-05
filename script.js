@@ -19,17 +19,10 @@ function showVideo(video){
         const name = document.createElement('p');
         name.innerText = vid.name
         card.appendChild(name)
-        const duration = document.createElement('span');   
-        let seconds = vid.duration;
-        let min = Math.floor(seconds/60);
-        seconds = seconds - min*60;  
-        duration.innerHTML =`video duration min:${min} sec:${seconds}`;
-        card.appendChild(duration);  
-                
+        const duration = document.createElement('span');          
+        duration.innerHTML =`video duration min:${Math.floor(vid.duration/60)} sec:${vid.duration%60}`;
+        card.appendChild(duration);                  
         document.body.appendChild(card);
-
-
-
     }
 }
 
@@ -62,18 +55,12 @@ async function showTarget(id,nameVid){
     wiew.innerText = `просмотры: ${vid.viewCount}`;
     dialog.appendChild(wiew);   
 
-    const close = document.createElement('span');
+    const close = document.createElement('img');
     close.classList.add("close");
-    close.innerText = "X"
+    close.src = "1.png"
     dialog.appendChild(close);
     close.addEventListener('click', ()=> overLay.remove());
-
-    overLay.appendChild(dialog)
-
-
-    
-
-
+    overLay.appendChild(dialog) 
     
 }
 

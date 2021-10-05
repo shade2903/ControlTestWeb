@@ -51,13 +51,10 @@
   .close{
       position: absolute;
       top: 5px;
-      right: 15px;
-      border: black solid 1px;
-      width: 20px;
-      height: 20px;
-      padding: 0;
-      text-align: center;
+      right: 15px;      
+      width: 25px;      
+      padding: 0;     
       border-radius: 50%;
-      background-color: rgba(128, 255, 0, 0.397);
+      
     
   }
